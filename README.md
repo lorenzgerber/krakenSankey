@@ -7,7 +7,7 @@ to sankey html plots from kraken report files:
 Rscript krakenSankey.R kraken.report
 ```
 Functions in `krakenSankey.R` require the 
-[`sankeyD3`]{https://github.com/fbreitwieser/sankeyD3} package which itself
+[`sankeyD3`](https://github.com/fbreitwieser/sankeyD3) package which itself
 has a number of dependencies. 
 
 ### Docker
