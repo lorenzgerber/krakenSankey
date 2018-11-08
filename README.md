@@ -1,5 +1,4 @@
 # krakenSankey
-![kraken sankey plot](images/example.png)
 
 ### Commandline
 This repository contains an R file that can be run with `Rscript` from the cli
