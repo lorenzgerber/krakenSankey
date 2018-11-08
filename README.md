@@ -13,7 +13,7 @@ has a number of dependencies.
 ### Docker
 The repository also contains a `Dockerfile` to build a Docker image that already
 contains all required R packages. The Docker image can also be obtained from 
-the author's [DockerHub]{https://hub.docker.com/r/lorenzgerber/krakensankey/}.
+the author's [DockerHub](https://hub.docker.com/r/lorenzgerber/krakensankey/).
 
 The syntax for running dockerized:
 ```
@@ -23,6 +23,6 @@ The result file, `kraken.html` is written in the mounted directory.
 
 ### References / Acknowledgments
 Most of the code in this repo is 1:1 extracted from Florian Breitwieser's repo
-[pavian]{https://github.com/fbreitwieser/pavian}.
+[pavian](https://github.com/fbreitwieser/pavian).
 
 
