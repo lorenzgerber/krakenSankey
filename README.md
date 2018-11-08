@@ -7,7 +7,7 @@ to sankey html plots from kraken report files:
 Rscript krakenSankey.R kraken.report
 ```
 Functions in `krakenSankey.R` require the 
-[`sankeyD3`](https://github.com/fbreitwieser/sankeyD3) package which itself
+[sankeyD3](https://github.com/fbreitwieser/sankeyD3) package which itself
 has a number of dependencies. 
 
 ### Docker
@@ -17,7 +17,7 @@ the author's [DockerHub](https://hub.docker.com/r/lorenzgerber/krakensankey/).
 
 The syntax for running dockerized:
 ```
-docker run -v /host/path/to/krakenreport/:/data/ lorenzgerber:krakensankey kraken.report
+docker run -v /host/path/to/krakenreport/:/data/ lorenzgerber/krakensankey kraken.report
 ```
 The result file, `kraken.html` is written in the mounted directory.
 
