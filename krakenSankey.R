@@ -9,18 +9,18 @@ main <- function() {
   #
   library(magrittr)
   library(networkD3)
-  
+
   # get input args
   args <- commandArgs(trailingOnly = TRUE)
   filepath <- toString(args[1])
-  
+
   # Load data
   report <- read_report(filepath)
-  
+
   # Construct filename
   basename <- sub(pattern = "(.*)\\..*$", replacement = "\\1", basename(filepath))
   output_file <- paste(basename,'.html', sep = '')
-  
+
   # Output to png file
   build_sankey_network(report) %>% saveNetwork(file = output_file)
 }
@@ -47,11 +47,11 @@ read_report <- function(myfile, has_header=NULL, check_file = FALSE) {
 
   first.line <- tryCatch( readLines(myfile,n=1, warn=FALSE),
                           error = function(e) { warning("Error reading ",myfile); return() })
-  isASCII <-  function(txt) {
+  isASCII <- function(txt) {
     if (length(txt) == 0)
       return(FALSE)
     raw <- charToRaw(txt)
-    all(raw <= as.raw(127) && (raw >= as.raw(32) | raw == as.raw(9)))
+    all(raw <= as.raw(127) & (raw >= as.raw(32) | raw == as.raw(9)))
   }
   if (length(first.line) == 0) {
     dmessage("Could not read ", myfile, ".")
@@ -350,7 +350,7 @@ read_report2 <- function(myfile,collapse=TRUE,keep_taxRanks=c("D","K","P","C","O
         report[i,report[i,'taxRank']] <- report[i,'name']
       }
     }
-    
+
     rows_to_consider[i] <- TRUE
   }
 
